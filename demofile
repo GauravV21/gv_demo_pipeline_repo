@@ -1,0 +1,56 @@
+pipeline
+{
+	agent any
+	tools
+	{
+		maven 'MAVEN_HOME'
+	}
+	
+	stages
+	{
+		stage('Welcome Stage')
+		{
+			steps
+			{
+				echo 'Welcome to Jenkins Pipeline'
+			}
+		}
+		
+		stage('Clean Stage')
+		{
+			steps
+			{
+				echo 'Log - Clean Stage'
+			}
+		}	
+        stage('Clean Success Stage')
+		{
+			steps
+			{
+				echo 'Log - Clean Success Stage'
+			}
+		}	
+		stage('Test Stage')
+		{
+			steps
+			{
+				echo 'Log - Test Stage'
+			}
+		}		
+		stage('Build & Install Stage')
+		{
+			steps
+			{
+				echo 'Log - Build & Install Stage'
+			}
+		}		
+		
+		stage('Build Success')
+		{
+			steps
+			{
+				echo 'Log - Build successful'
+			}
+		}		
+      }
+}
